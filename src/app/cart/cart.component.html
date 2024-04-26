@@ -29,10 +29,11 @@
                 <p>publisher: {{book.publisher}}</p>
                 <p>pages : {{book.pages}}</p>
                 <p>Year : {{book?.year_of_publishing}}</p>
-                <button type="button" class="btn btn-danger btn-sm me-1 mb-2" title="Remove item"
+                <button type="button" class="btn btn-secondary btn-sm me-1 mb-2 remove-btn" title="Remove item"
                   (click)="removeBook(book.id)">
                   <!-- <i class="fas fa-trash"></i> -->
-                  remove
+                  <!-- remove -->
+                  <img src="assets/imgs/trash.svg" alt="">
                 </button>
 
                 <!-- Data -->
@@ -46,7 +47,7 @@
                   <div data-mdb-input-init class="form-outline">
                     <label class="form-label" for="form1">Quantity</label>
                     <input disabled id="form1" min="0" name="quantity" [value]="book?.orderedNumber" type="number"
-                      class="form-control" />
+                      class="form-control text-center" />
                   </div>
                   <button class="btn btn-primary px-3 ms-2" (click)="stepDown(book.id)">-</button>
                 </div>
