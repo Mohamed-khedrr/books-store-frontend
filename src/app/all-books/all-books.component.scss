@@ -4,6 +4,7 @@
 .nav-container {
   position: sticky;
   top: 0;
+  z-index: 10;
 }
 .nav-header-container {
   min-height: 100vh;

@@ -1,16 +1,19 @@
 import { Injectable } from '@angular/core';
 import { BookData } from '../all-books/book-data';
-import { filter } from 'rxjs';
+import { Observable, filter } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CartService {
+  numberOfItemsInCart: number = 0;
+
   constructor() {}
 
   saveToCart(books: BookData[]) {
     this.clearCart();
     localStorage.setItem('book_cart', JSON.stringify(books));
+    this.numberOfItemsInCart = books.length;
   }
 
   removeFromCart(bookId: string) {
@@ -23,11 +26,15 @@ export class CartService {
 
   clearCart() {
     localStorage.removeItem('book_cart');
+    this.numberOfItemsInCart = 0;
   }
 
   getBooksInCart(): BookData[] | null {
     const booksData = localStorage.getItem('book_cart');
     if (!booksData) return null;
-    else return JSON.parse(booksData) as BookData[];
+
+    const books = JSON.parse(booksData) as BookData[];
+    this.numberOfItemsInCart = books.length;
+    return books;
   }
 }

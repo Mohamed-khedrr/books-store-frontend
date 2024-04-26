@@ -3,16 +3,20 @@
   <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId"
     aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
   <div class="collapse navbar-collapse" id="collapsibleNavId">
+    <div class=" w-100 d-flex justify-content-end ">
+      <button class="btn my-2 my-sm-0 nav-cart-btn" type="submit">
+        <img class="cart-img" src="assets/imgs/cart.svg" alt="">
+        <small class="number-of-items text-light "> {{cartService.numberOfItemsInCart || ''}}</small>
+      </button>
+    </div>
     <!-- <ul class="navbar-nav me-auto mt-2 mt-lg-0">
       <li class="nav-item">
         <a class="nav-link active" href="#" aria-current="page">Home <span class="visually-hidden">(current)</span></a>
       </li>
-    </ul> -->
-    <!-- <form class="d-flex my-2 my-lg-0">
-      <input class="form-control me-sm-2" type="text" placeholder="Search" />
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-        Search
-      </button>
-    </form> -->
+    </ul>
+   <form class="d-flex my-2 my-lg-0">
+      <input class="form-control me-sm-2" type="text" placeholder="Search" /> -->
+
+    <!-- </form> -->
   </div>
 </nav>

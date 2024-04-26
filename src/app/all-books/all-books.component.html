@@ -1,24 +1,24 @@
 <!-- ============ Nav ============ -->
 <section class="main-container pb-5">
-  <div class="nav-header-container">
-    <div class="nav-container">
-      <app-nav></app-nav>
-    </div>
-    <!-- ============ Header ============ -->
-    <header class="header text-light d-flex  flex-column  justify-content-center  ">
+  <!-- <div class="nav-header-container"> -->
+  <div class="nav-container">
+    <app-nav></app-nav>
+  </div>
+  <!-- ============ Header ============ -->
+  <!-- <header class="header text-light d-flex  flex-column  justify-content-center  ">
       <div class="container  ">
         <h1 class="mb-4">Book Store</h1>
         <h2>All Your <span class="text-dark ">Books</span> in one place</h2>
       </div>
-    </header>
-  </div>
+    </header> -->
+  <!-- </div> -->
 
   <main class="all-books-container container my-5">
     <h3 class="my-4">All Books: </h3>
     <div class="row books-row">
       <!-- ================ -->
       @for (book of booksData; track book.id) {
-      <div class="col-md-3">
+      <div class="col-md-3 mt-4">
         <div class="card text-center p-3 pt-4 ">
           <div class="card-image__container">
             <img [src]="book.cover_photo" class="card-img-top" alt="...">
