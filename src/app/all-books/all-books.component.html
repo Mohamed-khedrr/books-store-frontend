@@ -31,7 +31,7 @@
               <button href="#" class="btn btn-success   cart-btn" (click)="addToCart(book)">
                 <img src="assets/imgs/cart.svg" alt=""> </button>
               }@else {
-              <button href="#" class="btn btn-secondary  cart-btn" (click)="addToCart(book)">
+              <button href="#" class="btn btn-secondary  cart-btn" (click)="removeFromCart(book.id)">
                 X </button>
               }
               <p class="price d-flex my-0 align-items-center ">{{book.price}} EGP</p>
