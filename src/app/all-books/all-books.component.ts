@@ -36,13 +36,13 @@ export class AllBooksComponent implements OnInit {
 
   addToCart(data: BookData) {
     if (!this.cartBooks) this.cartBooks = [];
+    data.orderedNumber = 1;
     this.cartBooks.push(data);
     this.cartService.saveToCart(this.cartBooks);
   }
 
   removeFromCart(bookId: string) {
     this.cartService.removeFromCart(bookId);
-    // console.log(this.cartService.getBooksInCart());
     this.cartBooks = this.cartService.getBooksInCart();
   }
 

@@ -4,10 +4,10 @@ export interface BookData {
   author: string;
   cover_photo: string;
   price: number;
-
+  publisher: string;
+  pages: number;
+  orderedNumber: number;
+  number_of_available_copies: number;
   category?: string;
-  number_of_available_copies?: string;
-  pages?: number;
-  publisher?: string;
-  year_of_publishing?: string;
+  year_of_publishing?: number;
 }

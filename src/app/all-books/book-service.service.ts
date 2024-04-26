@@ -24,6 +24,12 @@ export class BookService {
       title: 'Leave the World Behind: A Read with Jenna Pick',
       author: 'Rumaan Alam',
       price: 100,
+      publisher: 'Mohamed Khedr',
+      pages: 500,
+      year_of_publishing: 2023,
+      number_of_available_copies: 10,
+
+      orderedNumber: 0,
       cover_photo:
         'https://cherryblossom-books.com/wp-content/uploads/2024/01/9780062667649_b8b25d6d-e760-45cd-8bb3-e4cb397623e1.jpg',
     },
@@ -32,6 +38,12 @@ export class BookService {
       title: 'Leave the World Behind: A Read with Jenna Pick',
       author: 'Rumaan Alam',
       price: 50,
+      publisher: 'Mohamed Khedr',
+      pages: 500,
+      year_of_publishing: 2023,
+      orderedNumber: 0,
+      number_of_available_copies: 10,
+
       cover_photo:
         'https://cherryblossom-books.com/wp-content/uploads/2024/01/lf6-1.jpeg',
     },
@@ -40,6 +52,12 @@ export class BookService {
       title: 'Leave the World Behind: A Read with Jenna Pick',
       author: 'Rumaan Alam',
       price: 100,
+      publisher: 'Mohamed Khedr',
+      pages: 500,
+      orderedNumber: 0,
+      year_of_publishing: 2023,
+      number_of_available_copies: 10,
+
       cover_photo:
         'https://cherryblossom-books.com/wp-content/uploads/2024/01/9780062667649_b8b25d6d-e760-45cd-8bb3-e4cb397623e1.jpg',
     },
@@ -48,6 +66,13 @@ export class BookService {
       title: 'Leave the World Behind: A Read with Jenna Pick',
       author: 'Rumaan Alam',
       price: 50,
+      publisher: 'Mohamed Khedr',
+      pages: 500,
+      orderedNumber: 0,
+      number_of_available_copies: 10,
+
+      year_of_publishing: 2023,
+
       cover_photo:
         'https://cherryblossom-books.com/wp-content/uploads/2024/01/lf6-1.jpeg',
     },
@@ -56,6 +81,12 @@ export class BookService {
       title: 'Leave the World Behind: A Read with Jenna Pick',
       author: 'Rumaan Alam',
       price: 100,
+      publisher: 'Mohamed Khedr',
+      pages: 500,
+      orderedNumber: 0,
+      number_of_available_copies: 10,
+
+      year_of_publishing: 2023,
       cover_photo:
         'https://cherryblossom-books.com/wp-content/uploads/2024/01/9780062667649_b8b25d6d-e760-45cd-8bb3-e4cb397623e1.jpg',
     },
@@ -64,6 +95,11 @@ export class BookService {
       title: 'Leave the World Behind: A Read with Jenna Pick',
       author: 'Rumaan Alam',
       price: 50,
+      publisher: 'Mohamed Khedr',
+      pages: 500,
+      orderedNumber: 0,
+      year_of_publishing: 2023,
+      number_of_available_copies: 10,
       cover_photo:
         'https://cherryblossom-books.com/wp-content/uploads/2024/01/lf6-1.jpeg',
     },

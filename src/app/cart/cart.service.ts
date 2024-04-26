@@ -32,7 +32,6 @@ export class CartService {
   getBooksInCart(): BookData[] | null {
     const booksData = localStorage.getItem('book_cart');
     if (!booksData) return null;
-
     const books = JSON.parse(booksData) as BookData[];
     this.numberOfItemsInCart = books.length;
     return books;

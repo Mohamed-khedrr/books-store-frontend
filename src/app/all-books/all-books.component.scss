@@ -1,33 +1,29 @@
 .main-container {
   background-color: rgba(128, 128, 128, 0.2);
 }
-.nav-container {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-.nav-header-container {
-  min-height: 100vh;
-  background-color: teal;
-  display: grid;
-  grid-template-rows: auto 1fr;
-}
-.header {
-  background-color: #70b2a1;
-  h1,
-  h2 {
-    font-size: 60px;
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
-  }
-  h2 {
-    font-size: 50px;
-  }
-}
+
+// .nav-header-container {
+//   min-height: 100vh;
+//   background-color: teal;
+//   display: grid;
+//   grid-template-rows: auto 1fr;
+// }
+// .header {
+//   background-color: #70b2a1;
+//   h1,
+//   h2 {
+//     font-size: 60px;
+//     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+//   }
+//   h2 {
+//     font-size: 50px;
+//   }
+// }
 
 .all-books-container {
   .books-row {
     .card {
-      height: 450px;
+      min-height: 450px;
       box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
       transition: all 0.4s;
       &:hover {
