@@ -1,11 +1,5 @@
 import { BookData } from './../all-books/book-data';
-import {
-  Component,
-  OnChanges,
-  OnInit,
-  SimpleChanges,
-  inject,
-} from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CartService } from './cart.service';
 import { RouterLink } from '@angular/router';
 
@@ -19,12 +13,10 @@ import { RouterLink } from '@angular/router';
 export class CartComponent implements OnInit {
   cartService = inject(CartService);
   cartBooks!: BookData[] | null;
-  allBooksPrice: number = 0;
-  shippingPrice = 50;
 
   ngOnInit(): void {
     this.getCartBooks();
-    this.calcAllBooksPrice();
+    this.cartService.calcAllBooksPrice();
   }
 
   getCartBooks() {
@@ -41,7 +33,6 @@ export class CartComponent implements OnInit {
     });
 
     this.cartService.saveToCart(cartBooks);
-    this.calcAllBooksPrice();
   }
 
   stepDown(bookId: string) {
@@ -55,20 +46,10 @@ export class CartComponent implements OnInit {
       }
     });
     this.cartService.saveToCart(cartBooks);
-    this.calcAllBooksPrice();
   }
 
   removeBook(bookId: string) {
     this.cartService.removeFromCart(bookId);
     this.getCartBooks();
-    this.calcAllBooksPrice();
-  }
-
-  calcAllBooksPrice() {
-    let totalBooksPrice = 0;
-    this.cartBooks?.map(
-      (book) => (totalBooksPrice += book.price * book.orderedNumber)
-    );
-    this.allBooksPrice = totalBooksPrice;
   }
 }

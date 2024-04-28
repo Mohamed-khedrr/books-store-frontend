@@ -73,7 +73,12 @@ export class OrderFormComponent {
       customerAddress: this.userAddress.value as string,
       customerName: this.userName.value as string,
       orderDate: new Date().toISOString(),
-      totalAmount: 1,
+      totalAmount: Number(
+        (
+          this.cartService.shippingPrice + this.cartService.allBooksPrice
+        ).toFixed(2)
+      ),
+
       items: booksListData,
     };
     console.log(orderData);

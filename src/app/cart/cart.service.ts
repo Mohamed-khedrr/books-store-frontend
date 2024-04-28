@@ -7,13 +7,15 @@ import { Observable, filter } from 'rxjs';
 })
 export class CartService {
   numberOfItemsInCart: number = 0;
-
+  allBooksPrice: number = 0;
+  shippingPrice: number = 20;
   constructor() {}
 
   saveToCart(books: BookData[]) {
     this.clearCart();
     localStorage.setItem('book_cart', JSON.stringify(books));
     this.numberOfItemsInCart = books.length;
+    this.calcAllBooksPrice();
   }
 
   removeFromCart(bookId: string) {
@@ -35,5 +37,13 @@ export class CartService {
     const books = JSON.parse(booksData) as BookData[];
     this.numberOfItemsInCart = books.length;
     return books;
+  }
+
+  calcAllBooksPrice() {
+    let totalBooksPrice = 0;
+    const books = this.getBooksInCart();
+    if (!books) return;
+    books.map((book) => (totalBooksPrice += book.price * book.orderedNumber));
+    this.allBooksPrice = Number(totalBooksPrice.toFixed(2));
   }
 }
