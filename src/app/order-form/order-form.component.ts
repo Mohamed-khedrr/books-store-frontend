@@ -10,6 +10,7 @@ import { CartService } from '../cart/cart.service';
 import { BookData } from '../all-books/book-data';
 import { OrderService } from './order.service';
 import { HttpClientModule } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-order-form',
@@ -22,6 +23,7 @@ export class OrderFormComponent {
   formBuilder = inject(FormBuilder);
   cartService = inject(CartService);
   orderService = inject(OrderService);
+  router = inject(Router);
 
   orderForm = this.formBuilder.group({
     userName: ['', Validators.required],
@@ -46,11 +48,17 @@ export class OrderFormComponent {
     if (!orderData) return;
     this.orderService.saveOrder(orderData).subscribe({
       next: (res) => {
-        console.log('Order Saved ', res);
+        console.log('Order Saved ');
+        this.orderForm.reset();
+        this.cartService.clearCart();
+        this.router.navigate(['/order-success']);
       },
       error: (err) => {
         if (err.status == 200) {
-          console.log('Saved');
+          console.log('Order Saved ');
+          this.orderForm.reset();
+          this.cartService.clearCart();
+          this.router.navigate(['/order-success']);
         } else {
           console.log('Error in saving Order', err);
         }
