@@ -1,0 +1,12 @@
+import { BookData } from '../all-books/book-data';
+
+export interface OrderData {
+  customerName: string;
+  customerAddress: string;
+  orderDate: Date;
+  totalAmount: number;
+  items: {
+    item: BookData;
+    numberOfCopies: number;
+  }[];
+}
