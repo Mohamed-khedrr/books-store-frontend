@@ -49,7 +49,11 @@ export class OrderFormComponent {
         console.log('Order Saved ', res);
       },
       error: (err) => {
-        console.log('Error in saving Order', err);
+        if (err.status == 200) {
+          console.log('Saved');
+        } else {
+          console.log('Error in saving Order', err);
+        }
       },
     });
   }
