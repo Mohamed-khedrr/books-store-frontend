@@ -60,7 +60,7 @@ export class OrderFormComponent {
     const orderData: OrderData = {
       customerAddress: this.userAddress.value as string,
       customerName: this.userName.value as string,
-      orderDate: new Date(),
+      orderDate: new Date().toISOString(),
       totalAmount: 1,
       items: booksListData,
     };
