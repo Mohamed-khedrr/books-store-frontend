@@ -2,7 +2,7 @@ export interface BookData {
   id: string;
   title: string;
   author: string;
-  cover_photo: string;
+  coverPhoto: string;
   price: number;
   publisher: string;
   pages: number;
